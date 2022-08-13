@@ -13,9 +13,9 @@ readCSV = dac.dataAcquisition('dummy_data.csv')
 dataDist = readCSV.sensorData('distance')
 #dataThetaBall = readCSV.sensorData('theta_ball')
 
-x = md.database('localhost','root','53928071Setya')
+x = md.database('localhost','root','mypass')
 # average filter to clean data noise
-"""for x in range(len(dataDist)):
+for x in range(len(dataDist)):
     if dataDist[x][1] > 50:
         dataDist[x][1] = 0
     elif dataDist[x][1] < 0:
@@ -24,7 +24,7 @@ x = md.database('localhost','root','53928071Setya')
         dataDist[x][1] = dataDist[x][1]
     lastVal = dataDist[x][1]
     newVal = lastVal + newVal
-AverageFilter = newVal / len(dataDist)"""
+AverageFilter = newVal / len(dataDist)
 
 """
 # Database edit
